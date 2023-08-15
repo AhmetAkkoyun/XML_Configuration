@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id = "mygame" class = "com.ahmetakkoyun.xml.Pacman"></bean>
+<!--    <bean id = "mygame2" class = "com.ahmetakkoyun.xml.Pacman"></bean>-->
+
+<!--    kendi elimizle değerleri tanımladığımız yer-->
+    <bean id = "gamerunner" class="com.ahmetakkoyun.xml.GameRunner">
+        <constructor-arg ref="mygame"></constructor-arg>
+        <property name="username" value="java"></property>
+        <property name="password" value="root"></property>
+
+    </bean>
+
+
+</beans>
